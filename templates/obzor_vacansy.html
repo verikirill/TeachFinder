@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+<div class="wrap">
+    <div class="box" style="margin: auto;">
+        <div class="box-top" style="width: 600px;">
+            <img class="box-image" src="{{url_for('static', filename=avatar) }}">
+            <div class="title-flex">
+                <h3 class="box-title">{{user.surname}} {{user.name}} {{user.patronymic}}</h3>
+            </div>
+            <p class="user-follow-info">{{item.job}}</p>
+            <p class="description">Основная информация о вакансии: {{item.general_info}} </p>
+            <p class="description">Должностная информация: {{item.job_responsibilities}} </p>
+            <p class="description">Требования к кандидату: {{item.candidat_requirements}} </p>
+            <p class="description">Ключевые навыки: {{item.key_skills}} </p>
+            <p class="description">Дополнительные требования к кандидату: {{item.additions_candidat_requirements}} </p>
+            <p class="description">Почта: {{user.email}} </p>
+            <a class="description" href="tel:" style="hover: black">Номер телефона: {{user.number}} </a>
+            <a class="description" href="{{item.url_on_files}}">Ссылки на файлы: Нажмите, чтобы перейти </a>
+        </div>
+        {% if item.user_id == current_user1.id %}
+        <a href="/vacansy/{{item.id}}" style="margin-bottom: 5px;" class="button3">Редактировать Вакансию</a>
+        <a href="/vacansy-delete/{{item.id}}" style="margin-bottom: 5px;" class="button2">Удалить Вакансию</a>
+        {% endif %}
+    </div>
+</div>
+</body>
+{% endblock %}

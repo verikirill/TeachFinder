@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+<div class="wrap">
+    <div class="box" style="margin: auto;">
+        <div class="box-top" style="width: 600px;">
+            <img class="box-image" src="{{url_for('static', filename=avatar) }}">
+            <div class="title-flex">
+                <h3 class="box-title">{{user.surname}} {{user.name}} {{user.patronymic}}</h3>
+            </div>
+            <p class="user-follow-info">{{item.job}}</p>
+            <p class="description">Образование: {{item.obrazovanie}} </p>
+            <p class="description">Дополнительное образование: {{item.dop_obrazovanie}} </p>
+            <p class="description">Опыт работы: {{item.experience}} </p>
+            <p class="description">Дата рождения: {{item.data_rozdeniya}} </p>
+            <p class="description">Семейное положение: {{item.semeynoe_polozhenie}} </p>
+            <p class="description">Адрес проживания: {{item.adress}} </p>
+            <p class="description">Дополнительная Информация: {{item.dop_infa}} </p>
+            <p class="description">Почта: {{user.email}} </p>
+            <a class="description" href="tel:" style="hover: black">Номер телефона: {{user.number}} </a>
+            <a class="description" href="{{item.url_on_files}}">Ссылки на файлы: Нажмите, чтобы перейти </a>
+        </div>
+        {% if item.user_id == current_user1.id %}
+        <a href="/summary/{{item.id}}" style="margin-bottom: 5px;" class="button3">Редактировать Резюме</a>
+        <a href="/summaries-delete/{{item.id}}" style="margin-bottom: 5px;" class="button2">Удалить Резюме</a>
+        {% endif %}
+    </div>
+</div>
+</body>
+{% endblock %}

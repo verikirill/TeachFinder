@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section-title">
+    <span style="margin-top: 40px; font-size: 56px; text-shadow: 1px 1px 1px #000">{{title2}}</span>
+</div>
+<body style="background-image: url('static/img/fon2.jpg');">
+<div class="wrap">
+    {% for item in data %}
+    <div class="box">
+        <div class="box-top">
+            <img class="box-image"
+                 src="{{user.filter(User.id == item.user_id).first().avatar}}">
+            <div class="title-flex">
+                <h3 class="box-title">{{user.filter(User.id == item.user_id).first().name}} {{user.filter(User.id ==
+                    item.user_id).first().patronymic}}</h3>
+                <p class="user-follow-info">Работодатель: {{user.filter(User.id ==
+                    item.user_id).first().organiz.capitalize()}}</p>
+            </div>
+            <p class="description">Общая информация: {{item.general_info}} </p>
+            <p class="description">Должностная информация: {{item.job_responsibilities}} </p>
+        </div>
+        <a href="/obzor-vacansy/{{item.id}}" class="button1">Подробнее</a>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero-section set-bg" data-setbg="static/img/tyotka.jpg"
+         style="background-image: url('static/img/tetka23.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="hs-text">
+                    <span>Найдите свое место в образовании с нами!</span>
+                    <h2>Сделайте следующий шаг в своей карьере с нашей помощью!</h2>
+                    <p></p>
+                    <a href="/register-choose" class="primary-btn">Присоединяйся уже сегодня</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-us-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="as-pic">
+                    <img src="{{ url_for('static', filename='img/logo3.jpg') }}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="as-text">
+                    <div class="section-title">
+                        <span>О нас</span>
+                        <h2>Как появилась идея</h2>
+                    </div>
+                    <p class="f-para">В настоящее время в школах Ульяновска стал остро ощущаться дефицит учителей. Эта
+                        проблема затрагивает не только качество образования, но и условия труда самих педагогов. В связи
+                        с этим, вопрос о нехватке кадров в школьной сфере становится все более актуальным. С помощью
+                        этого сайта, мы хотим помочь с решением данной проблемы.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Наши преимущества</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <img src="static/img/star.png" alt="" width="90px" height="80px">
+                    <h4>Простота</h4>
+                    <p style="color: #dd1155;">Наш сайт максимально клиентоориентированный, поэтому любой сможет
+                        разобраться, как им пользоваться.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <img src="static/img/t-shirt.png" alt="" width="90px" height="80px">
+                    <h4>Дизайн</h4>
+                    <p style="color: #dd1155;">Современный и привлекательный дизайн, с использованием современных
+                        технологий.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <img src="static/img/heart.png" alt="" width="90px" height="80px">
+                    <h4>Никаких неудобств!</h4>
+                    <p style="color: #dd1155;">Искать работу в образовании - это наша работа! А вы можете, потратить его
+                        на себя :)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="portfolio-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Наш образовательные учреждения</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="portfolio-item set-bg large-item" style="background-image: url('static/img/ulgpu.jpg')">
+                    <div class="pi-hover">
+                        <a href="static/img/ulgpu.jpg" class="search-icon image-popup" target="_blank"><i
+                                class="fa fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="portfolio-item set-bg" style="background-image: url('static/img/ulgu.jpg')">
+                    <div class="pi-hover">
+                        <a href="static/img/ulgu.jpg" class="search-icon image-popup" target="_blank"><i
+                                class="fa fa-search"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="portfolio-item set-bg" style="background-image: url('static/img/41school.jpg')">
+                            <div class="pi-hover">
+                                <a href="static/img/41school.jpg" class="search-icon image-popup" target="_blank"><i
+                                        class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item set-bg" style="background-image: url('static/img/79school.jpg')">
+                            <div class="pi-hover">
+                                <a href="static/img/79school.jpg" class="search-icon image-popup" target="_blank"><i
+                                        class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
